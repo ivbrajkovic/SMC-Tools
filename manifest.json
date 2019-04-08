@@ -1,0 +1,29 @@
+{
+	"name": "SMC-Tool by Ivan Brajković",
+	"version": "0.4",
+	"manifest_version": 2,
+	"description": "Olakšava i automatizira unos podataka u aplikacije.",
+	"icons": {
+		"48": "/asset/images/copy.png"
+	},
+	"permissions": ["tabs", "activeTab", "declarativeContent", "storage"],
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	},
+	"page_action": {
+		"default_popup": "popup.html",
+		"default_icon": {
+			"48": "/asset/images/copy.png"
+		}
+	},
+	"commands": {
+		"_execute_browser_action": {
+			"suggested_key": {
+				"default": "Ctrl+Shift+F",
+				"mac": "MacCtrl+Shift+F"
+			}
+		}
+	},
+	"web_accessible_resources": ["injectACS.js", "script.js", "pageScript.js", "contentScript.js"]
+}
